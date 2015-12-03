@@ -2,11 +2,13 @@
 
 Copy File Path is a plugin for gedit 3.18+.
 
-This plugin provides a simple way to copy the current file path to the clipboard, through the context menu and the "Tools" menu section.
+This plugin provides a way to copy the current file path to the clipboard, through the context menu and the "Tools" menu section.
 
 # Installation
 
-Copy all files to ~/.local/share/gedit/plugins/
+[Download](https://github.com/willianveiga/gedit-copy-file-path/releases/latest/) and extract all files to `~/.local/share/gedit/plugins/`.
+
+To turn it on, open gedit, Preferences, Plugins.
 
 # Contributors
 
