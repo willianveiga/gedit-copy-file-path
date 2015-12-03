@@ -1,0 +1,9 @@
+[Plugin]
+Loader=python3
+Module=copyfilepath
+IAge=3
+Name=Copy File Path
+Description=Copy current file path to the clipboard
+Authors=Willian Gustavo Veiga <contact@willianveiga.com>
+Copyright=Copyright © 2015 Willian Gustavo Veiga <contact@willianveiga.com>
+Website=http://www.willianveiga.com
