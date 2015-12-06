@@ -70,6 +70,8 @@ class CopyFilePathPluginWindowActivatable(GObject.Object,
         action.connect('activate', lambda i, j: self.do_copy_file_path())
         self.window.add_action(action)
 
+        self.do_update_state()
+
     def do_update_state(self):
         document = self.window.get_active_document()
         enable = self.copy_file_path_plugin.document_loaded(document)
