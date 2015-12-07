@@ -96,10 +96,14 @@ class CopyFilePathPluginViewActivatable(GObject.Object, Gedit.ViewActivatable):
 
     def do_activate(self):
         self.copy_file_path_plugin = CopyFilePathPlugin()
-        self.view.connect('populate-popup', self.populate_popup)
+        self.populate_popup_handler_id = self.view.connect('populate-popup',
+                                                           self.populate_popup)
 
     def do_deactivate(self):
+        self.view.disconnect(self.populate_popup_handler_id)
+
         self.copy_file_path_plugin = None
+        self.populate_popup_handler_id = None
 
     def populate_popup(self, view, popup):
         item = Gtk.SeparatorMenuItem()
