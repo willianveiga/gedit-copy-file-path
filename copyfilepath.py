@@ -1,5 +1,5 @@
 # Copy File Path Plugin - Copy current file path to the clipboard.
-# Copyright (C) <2015>  <Willian Gustavo Veiga>
+# Copyright (C) 2017 Willian Gustavo Veiga
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,8 +14,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gettext import gettext as _
+import os
+import gettext
 from gi.repository import GObject, Gtk, Gdk, Gio, Gedit
+
+localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locale')
+t = gettext.translation('copyfilepath', localedir=localedir, fallback=True)
+_ = t.gettext
 
 
 class CopyFilePathPlugin:
@@ -96,10 +101,14 @@ class CopyFilePathPluginViewActivatable(GObject.Object, Gedit.ViewActivatable):
 
     def do_activate(self):
         self.copy_file_path_plugin = CopyFilePathPlugin()
-        self.view.connect('populate-popup', self.populate_popup)
+        self.populate_popup_handler_id = self.view.connect('populate-popup',
+                                                           self.populate_popup)
 
     def do_deactivate(self):
+        self.view.disconnect(self.populate_popup_handler_id)
+
         self.copy_file_path_plugin = None
+        self.populate_popup_handler_id = None
 
     def populate_popup(self, view, popup):
         item = Gtk.SeparatorMenuItem()
