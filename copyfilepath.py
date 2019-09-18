@@ -29,7 +29,7 @@ class CopyFilePathPlugin:
 
     def copy_to_clipboard(self, file_path):
         clipboard = Gtk.Clipboard.get_default(Gdk.Display.get_default())
-        Gtk.Clipboard.set_text(clipboard, file_path, len(file_path))
+        Gtk.Clipboard.set_text(clipboard, file_path, -1)
         clipboard.store()
 
     def document_loaded(self, document):
