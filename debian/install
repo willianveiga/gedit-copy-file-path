@@ -1,0 +1,4 @@
+#! /usr/bin/dh-exec
+
+copyfilepath.py /usr/lib/${DEB_HOST_MULTIARCH}/gedit/plugins
+copyfilepath.plugin /usr/lib/${DEB_HOST_MULTIARCH}/gedit/plugins

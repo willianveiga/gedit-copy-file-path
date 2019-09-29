@@ -1,5 +1,5 @@
 # Copy File Path Plugin - Copy current file path to the clipboard.
-# Copyright (C) 2017 Willian Gustavo Veiga
+# Copyright (C) 2019 Willian Gustavo Veiga
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@ import os
 import gettext
 from gi.repository import GObject, Gtk, Gdk, Gio, Gedit
 
-localedir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'locale')
+localedir = '/usr/share/locale'
 t = gettext.translation('copyfilepath', localedir=localedir, fallback=True)
 _ = t.gettext
 

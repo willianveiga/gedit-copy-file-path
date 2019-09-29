@@ -1,0 +1,5 @@
+gedit-plugin-copy-file-path (0.5.0-0) unstable; urgency=medium
+
+  * Initial release (Closes: #940837)
+
+ -- Willian Gustavo Veiga <beberveiga@gmail.com>  Sun, 29 Sep 2019 17:05:00 -0300

@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_prep:
+	echo "Skipping dh_prep"
+
+override_dh_install:
+	install --directory debian/gedit-plugin-copy-file-path/usr/share/locale/* /usr/share/locale/
+	dh_install
+

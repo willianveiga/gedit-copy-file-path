@@ -1,23 +1,20 @@
 # Copy File Path
-# Copyright (C) 2017 Willian Gustavo Veiga
-# Willian Gustavo Veiga <beberveiga@gmail.com>, 2017.
+# Copyright (C) 2019 Willian Gustavo Veiga
+# Willian Gustavo Veiga <beberveiga@gmail.com>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: copyfilepath\n"
 "POT-Creation-Date: 2017-05-26 21:34-0300\n"
-"PO-Revision-Date: 2017-05-27 15:17-0300\n"
+"PO-Revision-Date: 2019-09-29 17:05-0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
-"X-Generator: Poedit 1.8.11\n"
 "Last-Translator: Willian Gustavo Veiga <beberveiga@gmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: pt_BR\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 
-#: copyfilepath.py:51 copyfilepath.py:113
 msgid "Copy file path to the clipboard"
 msgstr "Copiar caminho do arquivo para a área de transferência"

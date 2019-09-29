@@ -1,0 +1,13 @@
+Source: gedit-plugin-copy-file-path
+Section: gnome
+Priority: optional
+Maintainer: Willian Gustavo Veiga <beberveiga@gmail.com>
+Build-Depends: debhelper (>=10), dh-exec (>=0.22)
+Standards-Version: 4.4.0
+Homepage: https://github.com/willianveiga/gedit-copy-file-path
+
+Package: gedit-plugin-copy-file-path
+Architecture: any
+Enhances: gedit
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: This plugin allows copying the current document's file path
